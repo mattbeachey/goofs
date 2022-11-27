@@ -9,6 +9,7 @@ let bUp = false;
 
 function changeColor(r, g, b) {
   document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+   document.body.style.backgroundImage = `linear-gradient(${r}deg, rgba(${r}, ${g}, ${b}, 1) 20%, rgba(${255 - r}, ${255 - g}, ${255 - b}, 1) 95%)`;
 }
 
 setInterval(() => {
