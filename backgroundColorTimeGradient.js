@@ -1,62 +1,61 @@
 //run in browser console
 
-let left = 255
-let middle = 255
-let right = 255
+let r = document.body.style.backgroundColor.split("(")[1].split(",")[0] || 255;
+let g = document.body.style.backgroundColor.split(",")[1].split(",")[0] || 255;
+let b = document.body.style.backgroundColor.split(",")[2].split(")")[0] || 255;
 
-function changeColor(left, mid, right){
-    document.body.style.backgroundColor = `rgb(${left}, ${mid}, ${right})`;
+function changeColor(r, g, b) {
+  document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
 }
 
-let leftUp = false;
-let midUp = false;
-let rightUp = false;
+let rUp = false;
+let gUp = false;
+let bUp = false;
 
 setInterval(() => {
-    const num = Math.floor(Math.random() * 3);
+  const num = Math.floor(Math.random() * 3);
 
-	if(num === 0){
-		if(left === 0){
-			leftUp = true;
-		}
-		if(left === 255){
-			leftUp = false;
-		}
-		if(leftUp){
-			left++;
-		} else {
-			left--;
-		}
- 	}
+  if (num === 0) {
+    if (r === 0) {
+      rUp = true;
+    }
+    if (r === 255) {
+      rUp = false;
+    }
+    if (rUp) {
+      r++;
+    } else {
+      r--;
+    }
+  }
 
+  if (num === 1) {
+    if (g === 0) {
+      gUp = true;
+    }
+    if (g === 255) {
+      gUp = false;
+    }
+    if (gUp) {
+      g++;
+    } else {
+      g--;
+    }
+  }
 
-	if(num === 1){
-		if(middle === 0){
-			midUp = true;
-		}
-		if(middle === 255){
-			midUp = false;
-		}
-		if(midUp){
-			middle++;
-		} else {
-			middle--;
-		}
- 	}
+  if (num === 2) {
+    if (b === 0) {
+      bUp = true;
+    }
+    if (b === 255) {
+      bUp = false;
+    }
+    if (bUp) {
+      b++;
+    } else {
+      b--;
+    }
+  }
 
-	if(num === 2){
-		if(right === 0){
-			rightUp = true;
-		}
-		if(right === 255){
-			rightUp = false;
-		}
-		if(rightUp){
-			right++;
-		} else {
-			right--;
-		}
- 	}
-    
-    changeColor(left, middle, right); 
+  changeColor(r, g, b);
 }, 1);
