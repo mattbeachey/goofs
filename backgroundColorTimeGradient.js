@@ -1,15 +1,15 @@
 //run in browser console
-
 let r = document.body.style.backgroundColor?.split("(")[1]?.split(",")[0] || 255;
 let g = document.body.style.backgroundColor?.split(",")[1]?.split(",")[0] || 255;
 let b = document.body.style.backgroundColor?.split(",")[2]?.split(")")[0] || 255;
 let rUp = false;
 let gUp = false;
 let bUp = false;
+let rotateDeg = 0;
 
 function changeColor(r, g, b) {
   document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
-   document.body.style.backgroundImage = `linear-gradient(${r}deg, rgba(${r}, ${g}, ${b}, 1) 20%, rgba(${255 - r}, ${255 - g}, ${255 - b}, 1) 95%)`;
+  document.body.style.backgroundImage = `linear-gradient(${rotateDeg}deg, rgba(${r}, ${g}, ${b}, .5) 20%, rgba(${255 - r}, ${255 - g}, ${255 - b}, .5) 95%)`;
 }
 
 setInterval(() => {
@@ -55,6 +55,12 @@ setInterval(() => {
     } else {
       b--;
     }
+  }
+
+  if (rotateDeg <= 360) {
+    rotateDeg += 0.3;
+  } else {
+    rotateDeg = 0;
   }
 
   changeColor(r, g, b);
