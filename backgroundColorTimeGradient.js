@@ -3,14 +3,13 @@
 let r = document.body.style.backgroundColor?.split("(")[1]?.split(",")[0] || 255;
 let g = document.body.style.backgroundColor?.split(",")[1]?.split(",")[0] || 255;
 let b = document.body.style.backgroundColor?.split(",")[2]?.split(")")[0] || 255;
+let rUp = false;
+let gUp = false;
+let bUp = false;
 
 function changeColor(r, g, b) {
   document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
 }
-
-let rUp = false;
-let gUp = false;
-let bUp = false;
 
 setInterval(() => {
   const num = Math.floor(Math.random() * 3);
