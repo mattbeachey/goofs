@@ -65,3 +65,7 @@ setInterval(() => {
 
   changeColor(r, g, b);
 }, 1);
+
+// //reverse sunset look
+// document.body.style.backgroundColor = 'rgb(247, 197, 140)';
+// document.body.style.backgroundImage = 'linear-gradient(182.4deg, rgba(247, 197, 140, 0.5) 20%, rgba(8, 58, 115, 0.5) 95%)';
