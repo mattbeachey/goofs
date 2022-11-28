@@ -1,19 +1,20 @@
 //run in browser console
-let r = document.body.style.backgroundColor?.split("(")[1]?.split(",")[0] || 255;
-let g = document.body.style.backgroundColor?.split(",")[1]?.split(",")[0] || 255;
-let b = document.body.style.backgroundColor?.split(",")[2]?.split(")")[0] || 255;
+const rand = max => Math.floor(Math.random() * (max + 1));
+let r = document.body.style.backgroundColor?.split("(")[1]?.split(",")[0] || rand(255);
+let g = document.body.style.backgroundColor?.split(",")[1]?.split(",")[0] || rand(255);
+let b = document.body.style.backgroundColor?.split(",")[2]?.split(")")[0] || rand(255);
 let rUp = false;
 let gUp = false;
 let bUp = false;
-let rotateDeg = document.body.style.rotateDeg || 0;
+let rotateDeg = document.body.style.rotateDeg || rand(360);
 
-function changeColor(r, g, b) {
+const changeColor = (r, g, b) => {
   document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
   document.body.style.backgroundImage = `linear-gradient(${rotateDeg}deg, rgba(${r}, ${g}, ${b}, .5) 20%, rgba(${255 - r}, ${255 - g}, ${255 - b}, .5) 95%)`;
 }
 
 setInterval(() => {
-  const num = Math.floor(Math.random() * 3);
+  const num = rand(2);
 
   if (num === 0) {
     if (r === 0) {
