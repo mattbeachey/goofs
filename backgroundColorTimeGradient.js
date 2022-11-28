@@ -5,7 +5,7 @@ let b = document.body.style.backgroundColor?.split(",")[2]?.split(")")[0] || 255
 let rUp = false;
 let gUp = false;
 let bUp = false;
-let rotateDeg = 0;
+let rotateDeg = document.body.style.rotateDeg || 0;
 
 function changeColor(r, g, b) {
   document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
@@ -62,7 +62,7 @@ setInterval(() => {
   } else {
     rotateDeg = 0;
   }
-
+  document.body.style.rotateDeg = rotateDeg;
   changeColor(r, g, b);
 }, 1);
 
@@ -72,3 +72,6 @@ setInterval(() => {
 
 // document.body.style.backgroundColor = 'rgb(145, 246, 174)'
 // document.body.style.backgroundImage = 'linear-gradient(152.1deg, rgba(145, 246, 174, 0.5) 20%, rgba(110, 9, 81, 0.5) 95%)'
+
+// document.body.style.backgroundColor = 'rgb(201, 202, 253)'
+// document.body.style.backgroundImage = 'linear-gradient(327.3deg, rgba(201, 202, 253, 0.5) 20%, rgba(54, 53, 2, 0.5) 95%)'
