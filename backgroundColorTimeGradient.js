@@ -82,15 +82,12 @@ setInterval(() => {
 	POC:
 
 	// append code input:
-
 	const input = document.createElement('input')
-
 	document.body.append(input)
-
 	document.body.addEventListener("keydown", (event) => {
-	if (event.keyCode === 13) {
-		eval(input.value)
-	}
+		if (event.keyCode === 13) {
+			eval(input.value)
+		}
 	});
 
 	// working user input: 
