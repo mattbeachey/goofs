@@ -76,3 +76,23 @@ setInterval(() => {
 
 // document.body.style.backgroundColor = 'rgb(201, 202, 253)'
 // document.body.style.backgroundImage = 'linear-gradient(327.3deg, rgba(201, 202, 253, 0.5) 20%, rgba(54, 53, 2, 0.5) 95%)'
+
+/* 
+	Challenge: stop colors from changing by writing a line of code in an html input on the screen (running thru eval)
+	POC:
+
+	// append code input:
+
+	const input = document.createElement('input')
+
+	document.body.append(input)
+
+	document.body.addEventListener("keydown", (event) => {
+	if (event.keyCode === 13) {
+		eval(input.value)
+	}
+	});
+
+	// working user input: 
+	for(let i = 0; i < 1000; i++){clearInterval(i)}
+*/
