@@ -85,11 +85,12 @@ setInterval(() => {
 	const input = document.createElement('input')
 	document.body.append(input)
 	document.body.addEventListener("keydown", (event) => {
-		if (event.keyCode === 13) {
+		if (event.key === 'Enter') {
 			eval(input.value)
 		}
 	});
 
 	// working user input: 
 	for(let i = 0; i < 1000; i++){clearInterval(i)}
+
 */
