@@ -77,6 +77,9 @@ setInterval(() => {
 // document.body.style.backgroundColor = 'rgb(201, 202, 253)'
 // document.body.style.backgroundImage = 'linear-gradient(327.3deg, rgba(201, 202, 253, 0.5) 20%, rgba(54, 53, 2, 0.5) 95%)'
 
+// document.body.style.backgroundColor = 'rgb(253, 248, 158)'
+// document.body.style.backgroundImage = 'linear-gradient(280.8deg, rgba(253, 248, 158, 0.5) 20%, rgba(2, 7, 97, 0.5) 95%)'
+
 /* 
 	Challenge: stop colors from changing by writing a line of code in an html input on the screen (running thru eval)
 	POC:
